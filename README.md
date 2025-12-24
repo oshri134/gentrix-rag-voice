@@ -93,34 +93,36 @@ npm start
 
 ```
 gentrix-rag-voice/
-├── .github/workflows/            # CI/CD
-│   └── ci.yml
-├── data/                         # RAG documents
-│   ├── company-info.txt
-│   └── product-catalog.txt
+├── data/                         # PDF documents for RAG
+│   └── *.pdf                     # Place your PDF files here
 ├── src/
-│   ├── __tests__/               # Unit tests
+│   ├── __tests__/               # Unit tests (41 tests)
 │   │   ├── api/
 │   │   ├── components/
 │   │   ├── hooks/
 │   │   └── lib/
 │   ├── app/
-│   │   ├── api/realtime/        # Next.js API routes
+│   │   ├── api/realtime/        # Next.js API route
+│   │   ├── layout.tsx
 │   │   └── page.tsx
 │   ├── components/
 │   │   ├── ui/                  # Reusable UI components
+│   │   │   ├── Button.tsx
+│   │   │   ├── RecordingIndicator.tsx
+│   │   │   ├── StatusBadge.tsx
+│   │   │   └── TranscriptView.tsx
 │   │   ├── ErrorBoundary.tsx
 │   │   └── VoiceChat.tsx
 │   ├── hooks/                   # Custom React hooks
 │   │   ├── useAudioPlayer.ts
 │   │   ├── useMicrophone.ts
 │   │   └── useVoiceChat.ts
-│   ├── lib/                     # Utilities
+│   ├── lib/                     # Utilities & constants
 │   │   ├── config.ts
 │   │   └── constants.ts
 │   └── types/                   # TypeScript types
 │       └── index.ts
-├── server.ts                    # Socket.IO server (TypeScript)
+├── server.ts                    # Socket.IO + OpenAI Realtime server
 ├── jest.config.js
 ├── package.json
 └── tsconfig.json
