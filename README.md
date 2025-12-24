@@ -1,6 +1,5 @@
 # Real-time Voice RAG Application
 
-[![CI](https://github.com/your-username/gentrix-rag-voice/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/gentrix-rag-voice/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black.svg)](https://nextjs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -45,17 +44,19 @@ cd gentrix-rag-voice
 npm install
 ```
 
-3. Configure environment variables:
+3. Create `.env.local` file with your OpenAI API key:
 
 ```bash
-cp .env.example .env.local
+echo "OPENAI_API_KEY=your_openai_api_key_here" > .env.local
 ```
 
-Edit `.env.local` and add your OpenAI API key:
+Or create the file manually and add:
 
 ```
 OPENAI_API_KEY=your_openai_api_key_here
 ```
+
+> **Note**: Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
 
 ## Running the Application
 
@@ -65,7 +66,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 npm run dev
 ```
 
-The application will start on [http://localhost:3000](http://localhost:3000)
+The application will start on [http://localhost:8080](http://localhost:8080)
 
 ### Production Mode
 
